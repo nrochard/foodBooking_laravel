@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div>RESERVERVATION</div>
+<div>CONTACT</div>
 
 
 @endsection

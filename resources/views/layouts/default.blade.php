@@ -8,7 +8,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Yantramanav:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
         <title>Food Booking</title>
         <!-- Styles -->
@@ -27,13 +27,13 @@
                 <a ><img src="{{URL::asset('/img/logo2.png')}}" alt="Food Booking" height="50" width="50"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">PRÉSENTATION</a>
+                <a class="nav-link" href="/">PRÉSENTATION</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">RÉSERVER</a>
+                <a class="nav-link" href="/reservation">RÉSERVER</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CONTACT</a>
+                <a class="nav-link" href="/contact">CONTACT</a>
             </li>
         </ul>
         @yield('content')

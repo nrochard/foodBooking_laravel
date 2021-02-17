@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/reservation', function () {
+    return view('booking');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/annulation', function () {
+    return view('canceled');
+});
