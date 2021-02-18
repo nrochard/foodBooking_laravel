@@ -13,17 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/', [\App\Http\Controllers\IndexController::class, 'show'])->name('index');
 
 Route::get('/reservation', function () {
     return view('booking');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'show'])->name('contact.form');
+Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'send'])->name('contact.form');
 
 Route::get('/annulation', function () {
     return view('canceled');

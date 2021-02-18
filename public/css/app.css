@@ -179,7 +179,7 @@ svg{
   height:0;
   }
   
-  .map-responsive iframe {
+.map-responsive iframe {
   left:0;
   top:0;
   height:100%;
@@ -187,8 +187,8 @@ svg{
   position:absolute;
   }
 
-  .nav{
-    background-color: white;
+.nav{
+  background-color: white;
   }
 
 
@@ -258,3 +258,94 @@ svg{
     #info .card{
       background-color: #b52818;
     }
+
+    .booking, #formContact{
+      border-top: 1px solid rgb(207, 207, 207);
+    }
+
+    .booking h1, #formContact h1{
+      text-align: center;
+      margin-top: 50px;
+      font-family: 'Staatliches', cursive;
+    }
+
+    .booking h2, #formContact h2{
+      color: black;
+      font-family: 'Mukta', sans-serif;
+      font-size: 25px;
+    }
+
+    .booking .hours{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .booking .hours .btn{
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .label_booking{
+      color: black;
+    }
+
+    .booking form div{
+      margin-bottom: 20px;
+    }
+
+    .btn-book{
+      background-color: #DB5A42;
+      color: white;
+      font-family: 'Staatliches', cursive;
+      letter-spacing: 1px;
+      border: 2px solid transparent;
+    }
+
+    .btn-book:hover{
+      border: 2px solid #DB5A42;
+      background-color: white;
+      color: #DB5A42;
+    }
+
+    .btn-book:focus{
+      box-shadow: none;
+    }
+
+    .hours button{
+      background-color: rgb(236, 208, 44);
+      border: none;
+    }
+
+    .hours button:hover{
+      background-color: rgb(228, 195, 10);
+      /* color: rgb(236, 208, 44); */
+    }
+
+  .hours button:focus{
+    background-color: rgb(228, 195, 10);
+    border-color: rgb(228, 195, 10);
+    box-shadow: 0 0 0 0.25rem rgb(228 195 10 / 50%);
+}
+
+/* .btn-book */
+
+
+#contact label{
+  color: black;
+}
+
+#formContact form > div{
+  margin-bottom: 20px;
+}
+
+@media (max-width:768px){
+  #formContact form .row > div:first-child{
+    margin-bottom: 20px;
+  }
+}
+
+#formContact input:focus{
+  border-color: rgb(228, 195, 10);
+    box-shadow: 0 0 0 0.25rem rgb(228 195 10 / 50%);
+}
