@@ -19,6 +19,13 @@
         </div>
         @endif
 
+        @if (session('error'))
+        <div  style="margin-top: 20px" class="alert alert-danger" role="alert">
+            {{ session('error') }}
+        </div>
+        @endif
+
+
         <h1>Réserver un repas</h1>
         <h2>Il suffit de choisir un créneau et de vous présenter au restaurant.</h2>
 
@@ -39,31 +46,33 @@
                         <label>Créneau :</label>
                         <div class="col-md-6">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="hour" id="hour" value="option1">
+                                <input class="form-check-input" type="radio" name="hour" value="10h30">
                                 <label class="form-check-label" for="hour">
                                     10h30 à 11h
                                 </label>
+                                
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="hour" id="hour" value="option1">
+                                <input class="form-check-input" type="radio" name="hour" value="11h">
                                 <label class="form-check-label" for="hour">
                                     11h à 11h30
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="hour" id="v" value="option1">
+                                <input class="form-check-input" type="radio" name="hour" value="11h30">
                                 <label class="form-check-label" for="hour">
                                     11h30 à 12h00
                                 </label>
+                                
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="hour" id="hour" value="option1">
+                                <input class="form-check-input" type="radio" name="hour" value="12h">
                                 <label class="form-check-label" for="hour">
                                     12h00 à 12h30
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="hour" id="hour" value="option1">
+                                <input class="form-check-input" type="radio" name="hour" value="12h30">
                                 <label class="form-check-label" for="hour">
                                     12h30 à 13h00
                                 </label>
@@ -71,25 +80,25 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="hour" id="hour" value="option1">
+                                <input class="form-check-input" type="radio" name="hour" value="16h">
                                 <label class="form-check-label" for="hour">
                                     16h00 à 16h30
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="hour" id="hour" value="option1">
+                                <input class="form-check-input" type="radio" name="hour" value="16h30">
                                 <label class="form-check-label" for="hour">
                                     16h30 à 17h00
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="hour" id="hour" value="option1">
+                                <input class="form-check-input" type="radio" name="hour"  value="17h">
                                 <label class="form-check-label" for="hour">
                                     17h00 à 17h30
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="hour" id="hour" value="option1">
+                                <input class="form-check-input" type="radio" name="hour" value="17h30">
                                 <label class="form-check-label" for="hour">
                                     17h30 à 18h00
                                 </label>
@@ -97,8 +106,8 @@
                         </div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="cgv" name="cgv">
-                        <label class="form-check-label label_booking" for="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="1" id="conditions" name="conditions">
+                        <label class="form-check-label label_booking" for="conditions">
                             J'ai lu et j'accepte les conditions générales d'utilisation
                         </label>
                     </div>

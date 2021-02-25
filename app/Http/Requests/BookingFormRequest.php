@@ -27,10 +27,10 @@ class BookingFormRequest extends FormRequest
 
         // ];
         return [
-                'email' => "required|alpha_dash",
+                'email' => "required|email",
                 'date' => "required",
                 'hour' => "required",
-                'cvg' => "required",
+                'conditions' => "accepted",
         ];
     }
 }
