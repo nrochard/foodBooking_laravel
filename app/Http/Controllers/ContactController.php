@@ -17,8 +17,6 @@ class ContactController extends Controller
         return view('contact');
     }
     public function send(ContactFormRequest $request){
-
-
         $params = [
             'first_name' => $request->get('first_name'),
             'last_name' => $request->get('last_name'),
@@ -28,7 +26,7 @@ class ContactController extends Controller
 
         Mail::send('emails.contact', $params, function($m) use ($params){
             $m->from($params['email'], $params['first_name'] . ' ' . $params['last_name']);
-            $m->to(Config::get('contact.email'), Config::get('contact.name'))->subject('Nouveau message');
+            $m->to(Config::get('contact.emailContact'), Config::get('contact.name'))->subject('Nouveau message');
         });
 
         // DB::table('contacts')->insert([
@@ -38,7 +36,6 @@ class ContactController extends Controller
         //     'message' => $params['msg'],
         // ]);
 
-        // Mail::to('lucie@findyourleads.com', "Lucie")->send(new Contact($params))->subject("Nouveau message");
-        return redirect('/contact');
+        return redirect('contact')->with('status', 'Message bien envoyé');
     }
 }

@@ -290,7 +290,7 @@ svg{
       color: black;
     }
 
-    .booking form div{
+    .booking form > div{
       margin-bottom: 20px;
     }
 
@@ -345,7 +345,21 @@ svg{
   }
 }
 
-#formContact input:focus{
+#formContact input:focus, .booking input:focus{
+  border-color:rgb(228, 195, 10);
+    box-shadow: none;
+}
+
+#formContact textarea:focus{
   border-color: rgb(228, 195, 10);
-    box-shadow: 0 0 0 0.25rem rgb(228 195 10 / 50%);
+  box-shadow: none;
+}
+
+.booking label{
+  color: black;
+}
+
+.booking .form-check-input:checked{
+  background-color: rgb(228, 195, 10);
+  border-color: rgb(228, 195, 10);
 }

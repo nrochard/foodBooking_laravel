@@ -1,6 +1,6 @@
 <?php 
 
 return [
-    'email' => env('MAIL_FROM_ADDRESS'),
+    'emailContact' => env('MAIL_FROM_ADDRESS_CONTACT'),
     'name' => env('MAIL_FROM_NAME')
 ];
