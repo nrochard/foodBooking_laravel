@@ -52,8 +52,8 @@ class BookingController extends Controller
             'token' => $params['token'],
         ]);
 
-                // Mettre la date en français
-                $params['date'] = Carbon::parse($params['date'])->format('d/m/Y');
+        // Mettre la date en français
+        $params['date'] = Carbon::parse($params['date'])->format('d/m/Y');
     
 
         // Création token unique
