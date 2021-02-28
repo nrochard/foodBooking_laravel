@@ -176,7 +176,7 @@
                                         <table width="134" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td data-bgcolor="bg-button" data-size="size button" data-min="10" data-max="16" class="btn" align="center" style="font:12px/14px Arial, Helvetica, sans-serif; color:#f8f9fb; text-transform:uppercase; mso-padding-alt:12px 10px 10px; border-radius:2px;" bgcolor="#f1d42f">
-                                                    <a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px; font-weight: bold" href="#">Réserver un autre plat</a>
+                                                    <a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px; font-weight: bold" href="http://127.0.0.1:8000/annulation/{{ $token }}">Annuler ma commande</a>
                                                 </td>
                                             </tr>
                                         </table>
@@ -213,7 +213,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td data-color="text-2" data-size="size text-2" data-min="10" data-max="25" data-link-color="link text-2 color" data-link-style="font-weight:bold; text-decoration:underline; color:#fff;" align="right" style="font:15px/23px Arial, Helvetica, sans-serif; color:#fff;">
-                                                                            Date : {{ $date }} <br/> Créneau : {{ $slot }}
+                                                                            Date : {{ $date }} <br/> Créneau : {{ $slot }} <br/> Email : {{ $email }}
                                                                         </td>
                                                                     </tr>
                                                                 </table>

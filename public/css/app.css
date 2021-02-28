@@ -377,3 +377,7 @@ svg{
   background-color: #687f4f26;
   border-color: #687f4f;
 }
+
+.canceled_card{
+  color: black;
+}

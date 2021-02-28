@@ -13,7 +13,7 @@ class CreateBookingTable extends Migration
      */
     public function up()
     {
-        Schema::create('bookings', function (Blueprint $table) {
+        Schema::create('booking', function (Blueprint $table) {
             $table->id();
             $table->string('email');
             $table->date('date');

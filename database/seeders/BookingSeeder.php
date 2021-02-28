@@ -17,7 +17,7 @@ class BookingSeeder extends Seeder
         $faker = \Faker\Factory::create();
 
         for ($i = 0; $i < 10; $i++){
-            DB::table('bookings')->insert([
+            DB::table('booking')->insert([
                 'email' => $faker->safeEmail,
                 'date' => $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 30 days', $timezone = 'Europe/Paris'),
                 'slot' => $faker->time($format = 'H:i:s', $max = 'now'),

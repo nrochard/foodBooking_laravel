@@ -30,3 +30,4 @@ Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'send']
 
 
 Route::get('/annulation/{token}', [\App\Http\Controllers\CanceledController::class, 'show'])->name('canceled');
+Route::post('/annulation/{token}', [\App\Http\Controllers\CanceledController::class, 'delete'])->name('canceled');
