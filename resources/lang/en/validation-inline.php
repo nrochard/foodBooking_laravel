@@ -177,5 +177,7 @@ return [
         'time'                  => 'heure',
         'available'             => 'disponible',
         'size'                  => 'taille',
+        'slot'                  => 'créneau',
+        'conditions'            => "des conditions générales d'utilisation"
     ],
 ];

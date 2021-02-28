@@ -29,7 +29,7 @@ class BookingFormRequest extends FormRequest
         return [
                 'email' => "required|email",
                 'date' => "required",
-                'hour' => "required",
+                'slot' => "required",
                 'conditions' => "accepted",
         ];
     }

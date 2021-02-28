@@ -19,25 +19,36 @@ class BookingController extends Controller
         $params = [
             'email' => $request->get('email'),
             'date' => $request->get('date'),
-            'hour' => $request->get('hours'),
+            'slot' => $request->get('slot'),
             'conditions' => $request->get('conditions'),
+            'token' => md5(uniqid(true))
         ];
 
-        $date = \Carbon\Carbon::parse($params['date']);
+        // print_r($params);
+        // die();
+
+        $date = Carbon::parse($params['date']);
 
         if($date->isWeekend()){
             return redirect('/reservation')
-            ->with('error','Nous ne servons pas de petits plats le week-end!');
+            ->with('error','Nous ne servons pas de petits plats le week-end ! ');
         }
 
+        DB::table('booking')->insert([
+            'email' => $params['email'],
+            'slot' => $params['slot'],
+            'date' => $params['date'],
+            'token' => $params['token'],
+        ]);
 
+        $token = md5(uniqid(true));
         Mail::send('emails.booking', $params, function($m) use ($params){
             $m->from($params['email']);
-            $m->to(Config::get('contact.emailContact'), Config::get('contact.name'))->subject('Nouveau message');
+            $m->to(Config::get('contact.emailBooking'), Config::get('contact.name'))->subject('Nouvelle réservation');
         });
 
 
-        $token = md5(uniqid(true));
+
         return redirect('reservation')->with('status', 'Message bien envoyé');
 
     }

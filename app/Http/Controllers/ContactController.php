@@ -36,6 +36,6 @@ class ContactController extends Controller
         //     'message' => $params['msg'],
         // ]);
 
-        return redirect('contact')->with('status', 'Message bien envoyé');
+        return redirect('contact')->with('status', 'Ton message a été envoyé, nous te répondons au plus vite 👍🏻');
     }
 }

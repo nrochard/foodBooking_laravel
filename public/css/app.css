@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    min-height: 100%;
 }
 
 
@@ -204,6 +205,7 @@ svg{
     margin-top: 30px;
     color: #333;
     background-color: #ececec;
+
   }
 
   #concept .card{
@@ -295,7 +297,7 @@ svg{
     }
 
     .btn-book{
-      background-color: #DB5A42;
+      background-color: rgb(236, 208, 44);
       color: white;
       font-family: 'Staatliches', cursive;
       letter-spacing: 1px;
@@ -303,9 +305,9 @@ svg{
     }
 
     .btn-book:hover{
-      border: 2px solid #DB5A42;
+      border: 2px solid rgb(236, 208, 44);
       background-color: white;
-      color: #DB5A42;
+      color: rgb(236, 208, 44);
     }
 
     .btn-book:focus{
@@ -362,4 +364,16 @@ svg{
 .booking .form-check-input:checked{
   background-color: rgb(228, 195, 10);
   border-color: rgb(228, 195, 10);
+}
+
+.alert-danger{
+  color: #db5a41;
+    background-color: #db5a414a;
+    border-color: #f5c2c7;
+}
+
+.alert-success{
+  color: #687f4f;
+  background-color: #687f4f26;
+  border-color: #687f4f;
 }
