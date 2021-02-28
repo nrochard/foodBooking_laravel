@@ -4,9 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Faker\Factory; 
 
-class ContactSeeder extends Seeder
+class BookingSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,13 +17,12 @@ class ContactSeeder extends Seeder
         $faker = \Faker\Factory::create();
 
         for ($i = 0; $i < 10; $i++){
-            DB::table('booking')->insert([
+            DB::table('bookings')->insert([
                 'email' => $faker->safeEmail,
-                'last_name' => $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 30 days', $timezone = 'Europe/Paris'),
-                'email' => $faker->email,
-                'message' => $faker->text,
+                'date' => $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 30 days', $timezone = 'Europe/Paris'),
+                'slot' => $faker->time($format = 'H:i:s', $max = 'now'),
+                'token' => md5(uniqid(true)),
             ]);
         }
-
     }
 }

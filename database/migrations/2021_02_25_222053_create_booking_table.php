@@ -13,13 +13,12 @@ class CreateBookingTable extends Migration
      */
     public function up()
     {
-        Schema::create('booking', function (Blueprint $table) {
+        Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('email');
             $table->date('date');
-            $table->string('hour');
-            $table->int('token');
+            $table->string('slot');
+            $table->string('token');
         });
     }
 
