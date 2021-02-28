@@ -24,15 +24,23 @@ class BookingController extends Controller
             'token' => md5(uniqid(true))
         ];
 
-        // print_r($params);
-        // die();
-
         $date = Carbon::parse($params['date']);
-
+        
+        // Vérification jours week-ends car fermés le samedi et dimanch
         if($date->isWeekend()){
             return redirect('/reservation')
             ->with('error','Nous ne servons pas de petits plats le week-end ! ');
         }
+        // Vérification date dans le futur
+        if ($date->lt(Carbon::now())){
+            return redirect('/reservation')
+            ->with('error','Attention à la date que tu choisis, elle doit être dans le futur et hors-weekend ! ');
+        }
+        
+        die();
+
+
+
 
         DB::table('booking')->insert([
             'email' => $params['email'],
