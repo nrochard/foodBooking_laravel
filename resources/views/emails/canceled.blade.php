@@ -176,7 +176,7 @@
                                         <table width="134" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td data-bgcolor="bg-button" data-size="size button" data-min="10" data-max="16" class="btn" align="center" style="font:12px/14px Arial, Helvetica, sans-serif; color:#f8f9fb; text-transform:uppercase; mso-padding-alt:12px 10px 10px; border-radius:2px;" bgcolor="#f1d42f">
-                                                    <a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px; font-weight: bold" href="http://127.0.0.1:8000/reservation">Réserver un plat</a>
+                                                    <a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px; font-weight: bold" href="https://food-booking-laravel.herokuapp.com/reservation">Réserver un plat</a>
                                                 </td>
                                             </tr>
                                         </table>
