@@ -4,12 +4,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactFormRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Contracts\Mail\Mailable;
-use App\Http\Mail\Contact;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller
 {
