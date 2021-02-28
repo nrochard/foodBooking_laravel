@@ -28,6 +28,5 @@ Route::post('/reservation', [\App\Http\Controllers\BookingController::class, 'bo
 Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'show'])->name('contact.form');
 Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'send'])->name('contact.form');
 
-Route::get('/annulation', function () {
-    return view('canceled');
-});
+
+Route::get('/annulation/{token}', [\App\Http\Controllers\CanceledController::class, 'show'])->name('canceled');

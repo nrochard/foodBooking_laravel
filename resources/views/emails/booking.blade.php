@@ -239,7 +239,7 @@
                                                     <table width="100%" cellpadding="0" cellspacing="0">
                                                         <tr>
                                                             <td data-color="text" data-link-color="link text color" data-link-style="text-decoration:underline; color:#797c82;" class="aligncenter" style="font:12px/16px Arial, Helvetica, sans-serif; color:#797c82; padding:0 0 10px;">
-                                                                Food Booking, 2021. &nbsp; Tous droits réservés. <a target="_blank" style="text-decoration:underline; color:#797c82;" href="sr_unsubscribe">Annuler ma commande.</a>
+                                                                Food Booking, 2021. &nbsp; Tous droits réservés. <a target="_blank" style="text-decoration:underline; color:#797c82;" href="http://127.0.0.1:8000/annulation/{{ $token }}">Annuler ma commande.</a>
                                                             </td>
                                                         </tr>
                                                     </table>

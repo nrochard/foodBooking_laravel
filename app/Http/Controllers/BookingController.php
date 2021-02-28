@@ -25,7 +25,7 @@ class BookingController extends Controller
         ];
 
         $date = Carbon::parse($params['date']);
-        
+
         // Vérification jours week-ends car fermés le samedi et dimanch
         if($date->isWeekend()){
             return redirect('/reservation')
@@ -36,11 +36,7 @@ class BookingController extends Controller
             return redirect('/reservation')
             ->with('error','Attention à la date que tu choisis, elle doit être dans le futur et hors-weekend ! ');
         }
-        
-        die();
-
-
-
+    
 
         DB::table('booking')->insert([
             'email' => $params['email'],
@@ -48,6 +44,9 @@ class BookingController extends Controller
             'date' => $params['date'],
             'token' => $params['token'],
         ]);
+
+        // Mettre la date en français
+        $params['date'] = Carbon::parse($params['date'])->format('d/m/Y');
 
         $token = md5(uniqid(true));
         Mail::send('emails.booking', $params, function($m) use ($params){
