@@ -162,12 +162,12 @@
                         <td data-bgcolor="bg-block" class="holder" style="padding:58px 60px 20px;" bgcolor="#f9f9f9">
                             <table width="100%" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td data-color="title" data-size="size title" data-min="25" data-max="45" data-link-color="link title color" data-link-style="text-decoration:none; color:#db5a41;" class="title" align="center" style="font:35px/38px Arial, Helvetica, sans-serif; color:#db5a41; padding:0 0 24px;">
+                                    <td data-color="title" data-size="size title" data-min="25" data-max="45" data-link-color="link title color" data-link-style="text-decoration:none; color:#db5a41;" class="title" align="center" style="font: bold 35px/38px Arial, Helvetica, sans-serif; color:#db5a41; padding:0 0 24px;">
                                         FOOD BOOKING
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td data-color="text" data-size="size text" data-min="10" data-max="26" data-link-color="link text color" data-link-style="font-weight:bold; text-decoration:underline; color:#40aceb;" align="center" style="font:bold 16px/25px Arial, Helvetica, sans-serif; color:#888; padding:0 0 23px;">
+                                    <td data-color="text" data-size="size text" data-min="10" data-max="26" data-link-color="link text color" data-link-style="font-weight:bold; text-decoration:underline; color:#40aceb;" align="center" style="font: 16px/25px Arial, Helvetica, sans-serif; color:#888; padding:0 0 23px;">
                                         Merci pour ta réservation ! N'oublie pas de venir chercher ton repas au restaurant dans le créneau que tu as choisi. Bon appétit !
                                     </td>
                                 </tr>
@@ -176,7 +176,7 @@
                                         <table width="134" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td data-bgcolor="bg-button" data-size="size button" data-min="10" data-max="16" class="btn" align="center" style="font:12px/14px Arial, Helvetica, sans-serif; color:#f8f9fb; text-transform:uppercase; mso-padding-alt:12px 10px 10px; border-radius:2px;" bgcolor="#f1d42f">
-                                                    <a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px;" href="#">Réserver un autre plat</a>
+                                                    <a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px; font-weight: bold" href="#">Réserver un autre plat</a>
                                                 </td>
                                             </tr>
                                         </table>

@@ -49,7 +49,7 @@ class BookingController extends Controller
 
 
 
-        return redirect('reservation')->with('status', 'Message bien envoyé');
+        return redirect('reservation')->with('status', 'Merci, ta confirmation de réservation a été envoyé 👍🏻');
 
     }
 }
