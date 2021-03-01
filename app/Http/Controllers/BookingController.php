@@ -31,7 +31,6 @@ class BookingController extends Controller
             ->with('error',"Il y a déjà une commande en cours avec cette adresse mail. Désolée, tu ne peux avoir qu'une réservation à la fois. ");
         }
 
-
         // Vérification jours week-ends car fermés le samedi et dimanche
         if($date->isWeekend()){
             return redirect('/reservation')
@@ -43,6 +42,16 @@ class BookingController extends Controller
             ->with('error','Attention à la date que tu choisis, elle doit être dans le futur et hors-weekend ! ')->withInput();
         }
 
+        $user = DB::table('booking')
+                        ->where('date', $params['date'])
+                        ->where('slot', $params['slot'])
+                        ->get();
+        $count = count($user);
+
+        if ($count >= 5){
+            return redirect('/reservation')
+            ->with('error','Dommage, tous les plats ont été réservés pour ce créneau ! ')->withInput();
+        }
 
         // Insertion de la réservation en français
         DB::table('booking')->insert([
