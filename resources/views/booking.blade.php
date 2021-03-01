@@ -53,54 +53,54 @@
                         <label>Créneau :</label>
                         <div class="col-md-6">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="slot" value="10h30 à 11h">
-                                <label class="form-check-label" for="slot">
+                                <input class="form-check-input" type="radio" name="slot" value="10h30 à 11h" id="slot1">
+                                <label class="form-check-label" for="slot1">
                                     10h30 à 11h
                                 </label>
                                 
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="slot" value="11h à 11h30">
-                                <label class="form-check-label" for="slot">
+                                <input class="form-check-input" type="radio" name="slot" value="11h à 11h30" id="slot2">
+                                <label class="form-check-label" for="slot2">
                                     11h à 11h30
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="slot" value="11h30 à 12h">
-                                <label class="form-check-label" for="slot">
+                                <input class="form-check-input" type="radio" name="slot" value="11h30 à 12h" id="slot3">
+                                <label class="form-check-label" for="slot3">
                                     11h30 à 12h00
                                 </label>
                                 
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="slot" value="12h à 12h30">
-                                <label class="form-check-label" for="slot">
+                                <input class="form-check-input" type="radio" name="slot" value="12h à 12h30" id="slot4">
+                                <label class="form-check-label" for="slot4">
                                     12h00 à 12h30
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="slot" value="12h30 à 13h">
-                                <label class="form-check-label" for="slot">
+                                <input class="form-check-input" type="radio" name="slot" value="12h30 à 13h" id="slot5">
+                                <label class="form-check-label" for="slot5">
                                     12h30 à 13h00
                                 </label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="slot" value="16h à 16h30">
-                                <label class="form-check-label" for="slot">
+                                <input class="form-check-input" type="radio" name="slot" value="16h à 16h30" id="slot6">
+                                <label class="form-check-label" for="slot6">
                                     16h00 à 16h30
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="slot" value="16h30 à 17h">
-                                <label class="form-check-label" for="slot">
+                                <input class="form-check-input" type="radio" name="slot" value="16h30 à 17h" id="slot7">
+                                <label class="form-check-label" for="slot7">
                                     16h30 à 17h00
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="slot"  value="17h à 17h30">
-                                <label class="form-check-label" for="slot">
+                                <input class="form-check-input" type="radio" name="slot"  value="17h à 17h30" id="slot8">
+                                <label class="form-check-label" for="slot8">
                                     17h00 à 17h30
                                 </label>
                             </div>

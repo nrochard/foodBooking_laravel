@@ -35,12 +35,12 @@ class BookingController extends Controller
         // Vérification jours week-ends car fermés le samedi et dimanche
         if($date->isWeekend()){
             return redirect('/reservation')
-            ->with('error','Nous ne servons pas de petits plats le week-end ! ');
+            ->with('error','Nous ne servons pas de petits plats le week-end ! ')->withInput();
         }
         // Vérification date dans le futur
         if ($date->lt(Carbon::now())){
             return redirect('/reservation')
-            ->with('error','Attention à la date que tu choisis, elle doit être dans le futur et hors-weekend ! ');
+            ->with('error','Attention à la date que tu choisis, elle doit être dans le futur et hors-weekend ! ')->withInput();
         }
 
 
