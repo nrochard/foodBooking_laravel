@@ -59,16 +59,13 @@ class BookingController extends Controller
         $params['date'] = Carbon::parse($params['date'])->format('d/m/Y');
     
 
-        // Création token unique
-        $token = md5(uniqid(true));
-
         //Envoi mail de confirmation
         Mail::send('emails.booking', $params, function($m) use ($params){
             $m->from($params['email']);
             $m->to(Config::get('contact.emailBooking'), Config::get('contact.name'))->subject('Nouvelle réservation');
         });
 
-        return response()->json(['message' => 'Merci, ta confirmation de réservation a été envoyé 👍🏻 !', 'token' => $token], 201);
+        return response()->json(['message' => 'Merci, ta confirmation de réservation a été envoyé 👍🏻 !', 'token' => $params['token']], 201);
 
         
     }
