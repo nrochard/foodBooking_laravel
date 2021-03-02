@@ -24,17 +24,17 @@ class BookingController extends Controller
         $date = Carbon::parse($params['date']);
 
         if (DB::table('booking')->where('email', $params['email'])->exists()) {
-            return response()->json("Il y a déjà une commande en cours avec cette adresse mail. Désolée, tu ne peux avoir qu'une réservation à la fois.", 400);
+            return response()->json(['message' => "Il y a déjà une commande en cours avec cette adresse mail. Désolée, tu ne peux avoir qu'une réservation à la fois."], 400);
         }
 
         // Vérification jours week-ends car fermés le samedi et dimanche
         if($date->isWeekend()){
-            return response()->json("Nous ne servons pas de petits plats le week-end ! ", 400);
+            return response()->json(['message' => "Nous ne servons pas de petits plats le week-end ! "], 400);
         }
 
         // Vérification date dans le futur
         if ($date->lt(Carbon::now())){
-            return response()->json("Attention à la date que tu choisis, elle doit être dans le futur et hors-weekend ! ", 400);
+            return response()->json(['message' => "Attention à la date que tu choisis, elle doit être dans le futur et hors-weekend ! "], 400);
         }
 
         $user = DB::table('booking')
@@ -44,7 +44,7 @@ class BookingController extends Controller
         $count = count($user);
 
         if ($count >= Config::get('informations.limit')){
-            return response()->json("Dommage, tous les plats ont été réservés pour ce créneau !", 400);
+            return response()->json(['message' => "Dommage, tous les plats ont été réservés pour ce créneau !"], 400);
         }
 
         // Insertion de la réservation en français
@@ -76,7 +76,7 @@ class BookingController extends Controller
     {
         // Vérification que le token existe
         if (DB::table('booking')->where('token', $token)->doesntExist()) {
-            return response()->json("Il n'y a pas de réservation qui correspond à votre demande !!", 400);
+            return response()->json(['message' => "Il n'y a pas de réservation qui correspond à votre demande !"], 400);
         }
 
         $params = DB::select('select * from booking where token = :token', ['token' => $token]);
@@ -90,6 +90,6 @@ class BookingController extends Controller
         // Suppression de la réservation
         DB::table('booking')->where('token', $token)->delete();
 
-        return response()->json("Ta commande a été correctement annulé 👍🏻 !", 200);
+        return response()->json(['message' => "Ta commande a été correctement annulé 👍🏻 !"] , 200);
     }
 }
