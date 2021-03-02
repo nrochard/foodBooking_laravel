@@ -176,7 +176,7 @@
                                         <table width="134" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td data-bgcolor="bg-button" data-size="size button" data-min="10" data-max="16" class="btn" align="center" style="font:12px/14px Arial, Helvetica, sans-serif; color:#f8f9fb; text-transform:uppercase; mso-padding-alt:12px 10px 10px; border-radius:2px;" bgcolor="#f1d42f">
-                                                    <a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px; font-weight: bold" href="https://food-booking-laravel.herokuapp.com/annulation/{{ $token }}">Annuler ma commande</a>
+                                                    <a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px; font-weight: bold" href="https://food-booking-laravel.herokuapp.com/reservation/annulation/{{ $token }}">Annuler ma commande</a>
                                                 </td>
                                             </tr>
                                         </table>
@@ -239,7 +239,7 @@
                                                     <table width="100%" cellpadding="0" cellspacing="0">
                                                         <tr>
                                                             <td data-color="text" data-link-color="link text color" data-link-style="text-decoration:underline; color:#797c82;" class="aligncenter" style="font:12px/16px Arial, Helvetica, sans-serif; color:#797c82; padding:0 0 10px;">
-                                                                Food Booking, 2021. &nbsp; Tous droits réservés. <a target="_blank" style="text-decoration:underline; color:#797c82;" href="https://food-booking-laravel.herokuapp.com/annulation/{{ $token }}">Annuler ma commande.</a>
+                                                                Food Booking, 2021. &nbsp; Tous droits réservés. <a target="_blank" style="text-decoration:underline; color:#797c82;" href="https://food-booking-laravel.herokuapp.com/reservation/annulation/{{ $token }}">Annuler ma commande.</a>
                                                             </td>
                                                         </tr>
                                                     </table>

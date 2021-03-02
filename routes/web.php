@@ -29,5 +29,5 @@ Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'show'])
 Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'send'])->name('contact.form');
 
 
-Route::get('/annulation/{token}', [\App\Http\Controllers\CanceledController::class, 'show'])->name('canceled');
-Route::post('/annulation/{token}', [\App\Http\Controllers\CanceledController::class, 'delete'])->name('canceled');
+Route::get('/reservation/annulation/{token}', [\App\Http\Controllers\CanceledController::class, 'show'])->name('canceled');
+Route::post('/reservation/annulation/{token}', [\App\Http\Controllers\CanceledController::class, 'delete'])->name('canceled');

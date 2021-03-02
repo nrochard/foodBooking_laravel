@@ -15,7 +15,7 @@
 
         <div class="card canceled_card" style="width: 100%">
             <div class="card-body">
-                <form action="/annulation/{{ $booking[0]->token }} " method="POST">
+                <form action="/reservation/annulation/{{ $booking[0]->token }} " method="POST">
                     @csrf
                     <h5 class="card-title">Récapitulatif de ta réservation</h5>
                     <p class="card-text">Date : {{ $booking[0]->date }} </p>
