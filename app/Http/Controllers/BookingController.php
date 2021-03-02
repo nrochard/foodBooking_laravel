@@ -48,7 +48,7 @@ class BookingController extends Controller
                         ->get();
         $count = count($user);
 
-        if ($count >= 5){
+        if ($count >= Config::get('informations.limit')){
             return redirect('/reservation')
             ->with('error','Dommage, tous les plats ont été réservés pour ce créneau ! ')->withInput();
         }

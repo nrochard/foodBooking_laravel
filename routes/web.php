@@ -19,9 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\IndexController::class, 'show'])->name('index');
 
-// Route::get('/reservation', function () {
-//     return view('booking');
-// });
 Route::get('/reservation', [\App\Http\Controllers\BookingController::class, 'show'])->name('booking.form');
 Route::post('/reservation', [\App\Http\Controllers\BookingController::class, 'book'])->name('booking.form');
 
