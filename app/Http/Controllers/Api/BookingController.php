@@ -21,10 +21,15 @@ class BookingController extends Controller
             'token' => md5(uniqid(true))
         ];
 
+        // if ($params['slot'] != "10h30 à 11h" || $params['slot'] != "11h à 11h30" || $params['slot'] != "12h à 12h30" || $params['slot'] != "12h30 à 13h" || $params['slot'] != "16h à 16h30" || $params['slot'] != "16h30 à 17h" || $params['slot'] != "17h à 17h30" || $params['slot'] != "17h30 à 18h")
+        // {
+        //     return response()->json(['message' => "Le créneau choisi n'est pas disponible."], 400);
+        // }
+
         $date = Carbon::parse($params['date']);
 
-        if (DB::table('booking')->where('email', $params['email'])->exists()) {
-            return response()->json(['message' => "Il y a déjà une commande en cours avec cette adresse mail. Désolée, tu ne peux avoir qu'une réservation à la fois."], 400);
+        if (DB::table('booking')->where('email', $params['email'])->where('date', $params['date'])->where('slot', $params['slot'])->exists()) {
+            return response()->json(['message' => "Il y a déjà une commande en cours avec cette adresse mail pour ce créneau."], 400);
         }
 
         // Vérification jours week-ends car fermés le samedi et dimanche
