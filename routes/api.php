@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/informations', [\App\Http\Controllers\Api\InformationsController::class, 'index']);
+Route::get('/infos', [\App\Http\Controllers\Api\InformationsController::class, 'index']);
 
 Route::post('/reservation', [\App\Http\Controllers\Api\BookingController::class, 'book']);
 
