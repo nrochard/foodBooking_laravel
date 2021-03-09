@@ -92,6 +92,6 @@ class BookingController extends Controller
         // Suppression de la réservation
         DB::table('booking')->where('token', $token)->delete();
 
-        return response()->json(['message' => "Ta commande a été correctement annulé 👍🏻 !", ['token'] => $token] , 200);
+        return response()->json(['message' => "Ta commande a été correctement annulé 👍🏻 !"] , 200);
     }
 }
